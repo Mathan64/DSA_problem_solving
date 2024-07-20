@@ -1,6 +1,5 @@
 	public boolean findTriplets(int nums[] , int n)
     {
-        //add code here.
         if(nums.length < 3)  return false;
  
             Arrays.sort(nums);
