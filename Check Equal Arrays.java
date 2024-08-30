@@ -2,20 +2,20 @@ class Solution {
     // Function to check if two arrays are equal or not.
     public static boolean check(int[] arr1, int[] arr2) {
         // Your code here
-        int n1=arr1.length;
-        int n2 =arr2.length;
-        if(n1!=n2){
+       if (arr1.length != arr2.length) {
             return false;
         }
-        HashSet<Integer> set=new HashSet<>();
-        for(int i=0;i<n1;i++){
-            set.add(arr1[i]);
-        }
-         for(int i=0;i<n2;i++){
-            if(!set.contains(arr2[i]))
-            return false;
-        }
-        return true;
+       int sum1=0;
+       int sum2=0;
+       
+       for(int i=0;i<arr1.length;i++){
+           sum1=sum1+arr1[i];
+           sum2=sum2+arr2[i];
+       }
+       if(sum1==sum2){
+           return true;
+       }
+        return false;  
     }
 }
 
